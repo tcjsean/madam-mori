@@ -1,0 +1,13 @@
+{
+  "name": "madam-mori",
+  "version": "0.4.7",
+  "description": "Keep your projects, decisions and preferences connected across supported AI tools.",
+  "author": {
+    "name": "AXETEXA PTE LTD",
+    "url": "https://www.mdmori.com"
+  },
+  "homepage": "https://www.mdmori.com/connect/memory",
+  "repository": "https://github.com/tcjsean/madam-mori",
+  "displayName": "Madam Mori",
+  "mcpServers": "./.mcp.json"
+}

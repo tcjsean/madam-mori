@@ -1,0 +1,22 @@
+# Archivist: organise the owner's graph
+
+Mori names the super agent. Archivist is the memory organisation role. Use only after the owner's request to organise memory; setup never writes sample facts. The connected host LLM performs semantic judgement. Core remains the sole graph writer. This role does not run a separate model or imply a continuously scheduled background service.
+
+## Framework
+
+Read `human-memory-framework.yaml`. Categories are graph nodes, facts are not duplicated, and one memory may span multiple dimensions. Instantiate useful domains only; do not create empty versions of every seed domain. Use adaptive subdomains only where a recurring cluster improves navigation, with multiple current/historical entities per domain.
+
+The recovered personal-graph doctrine also distinguishes memory types: Episodic, Knowledge/Semantic, Skills/Procedural, Decisions, Preferences, Goals/Prospective, Identity, Current State, Working/Temporary and Relationships. Entity classes include People/Contacts, Organisations, Projects, Products, Careers/Roles, Places, Ideas/Concepts and Events. These are separate dimensions, not competing folders. Exact evidence remains authoritative. A category is an LLM-derived navigation aid, never a new claim that the owner said its label.
+
+## Execute and review
+
+1. Collect every page through Numeric retrieve/read and read original evidence. Natural-language retrieve enumerates candidates without semantic ranking. Judge relevance yourself. Preserve current revisions, values, sources and epoch as the baseline.
+2. As the connected LLM, prepare `archivist-plan-v1`: `framework`, exact `owner_instruction`, and ordered `categories`. Each category has a unique local `key`, `label`, `dimension` (life_domain, memory_type, entity_class, entity or subdomain), evidence-grounded `reason` and `members` containing actual baseline IDs or earlier category keys. Do not classify from a keyword script or invent missing biographical details. Assess duplicates, conflicts, temporal changes and useful links; explain any deferred ambiguous changes.
+3. Use `scripts/archivist.mjs` with the host's authenticated four-tool callback and a private durable checkpoint callback. It has no credentials or network destination. It pages all data, resolves exact current IDs/revisions across pages, applies permitted category/link operations and reads back membership. Hosts without script execution can perform the identical sequence using these tools directly.
+4. `numeric-selection-v1:` plus JSON `{graph_epoch,facts:[{fact_id,revision}]}` selects 1–8 actual read IDs in order. It is an exact, owner/revision/epoch checked selector, not a search shortcut.
+5. Discover `capabilities.category_creation=archivist-category-v1`. A named category uses existing operation 1 with target_slot=null, actual member_slots and one permitted blank slot. candidate.value is the label; candidate.source_text is JSON with schema_version=archivist-category-v1, framework, dimension, reason, owner_instruction. All other selectors are empty/null. Send consent=true. This creates structure, not another factual memory. Repeated category identity reuses the same node.
+6. Additional memberships use operation 4 ADD, member as target and category as endpoint, with the advertised CORE PART_OF relation slot. `retrieve(query="numeric-members-v1", read_id=category-read, selected_slots=[...])` follows directed members only and supports normal pagination. General follow still traverses adjacent nodes in either direction.
+7. Write the exact outbound request to a durable private journal before submission. Stop on an uncertain result. Recovery checks/replays that identical payload and request_id; never blindly invent a new write ID. Fresh sessions must have distinct IDs. After a completed pass, a fresh collection and the same plan should produce zero additional mutations.
+8. Review actual receipts, category membership, unchanged original facts/revisions/evidence, retrieval paths and restart persistence. Report observed counts and limits. A real write receipt and readback are required; a plan, copied-input counter, mocked test or manually reviewed report is not live execution proof.
+
+Deletion, revision, split and merge remain available through the controlled operation guide, only when justified and authorised. Organisation does not require deleting facts. Do not restore retired interfaces, directly edit the database, create a second permanent graph or activate historical training/GPU plans.

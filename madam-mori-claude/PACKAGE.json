@@ -1,0 +1,28 @@
+{
+  "name": "Madam Mori",
+  "version": "0.4.7",
+  "platform": "claude",
+  "components": [
+    "connector",
+    "mori-setup",
+    "mori-memory",
+    "mori-reconnect",
+    "branding",
+    "optional-project-instructions"
+  ],
+  "required_tools": [
+    "mori_open",
+    "mori_status",
+    "mori_browse",
+    "mori_search",
+    "mori_remember",
+    "memory_numeric_menu",
+    "memory_numeric_submit",
+    "memory_numeric_retrieve",
+    "memory_numeric_read"
+  ],
+  "setup_required": true,
+  "marketplace_publication": "not-published",
+  "contains_user_data": false,
+  "contains_credentials": false
+}

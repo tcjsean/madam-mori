@@ -1,0 +1,27 @@
+{
+  "name": "Madam Mori",
+  "version": "0.4.7",
+  "publisher": "AXETEXA PTE LTD",
+  "repository": "https://github.com/tcjsean/madam-mori",
+  "release_url": "https://github.com/tcjsean/madam-mori/releases/tag/v0.4.7",
+  "installation_url": "https://www.mdmori.com/connect/memory",
+  "chatgpt_directory_status": "pending",
+  "packages": {
+    "claude": {
+      "url": "https://www.mdmori.com/downloads/madam-mori/0.4.7/madam-mori-claude-plugin.zip",
+      "sha256": "09c254224231c83471be49899a95dcd490eece8ad488ce1a0cb22fb0ed195692"
+    },
+    "codex": {
+      "url": "https://www.mdmori.com/downloads/madam-mori/0.4.7/madam-mori-codex-plugin.zip",
+      "sha256": "e88fca2aef75bde1d7894fb1fe8063fe7fbb0b8cd19e66968f576824e0b4cff3"
+    },
+    "chatgpt": {
+      "url": "https://www.mdmori.com/downloads/madam-mori/0.4.7/madam-mori-chatgpt-plugin.zip",
+      "sha256": "a4bd82df08e4d9060c79eb26ce72256c24b7e2f8d035f5cf481e767e476ea7d1"
+    },
+    "universal": {
+      "url": "https://www.mdmori.com/downloads/madam-mori/0.4.7/madam-mori-universal-plugin.zip",
+      "sha256": "575735e78985622c412d1ca1982640c12101e3f76e9477d37b290c19db3147b7"
+    }
+  }
+}

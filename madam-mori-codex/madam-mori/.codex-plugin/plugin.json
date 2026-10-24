@@ -1,0 +1,61 @@
+{
+  "name": "madam-mori",
+  "version": "0.4.7",
+  "description": "Keep your projects, decisions and preferences connected across supported AI tools.",
+  "author": {
+    "name": "AXETEXA PTE LTD",
+    "url": "https://www.mdmori.com"
+  },
+  "homepage": "https://www.mdmori.com/connect/memory",
+  "repository": "https://github.com/tcjsean/madam-mori",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Madam Mori",
+    "shortDescription": "Memory across your AI tools",
+    "longDescription": "Keep your projects, decisions and preferences connected across supported AI tools. Includes guided setup, memory recall and reconnection skills. Saves require your explicit request. Automatic skill selection depends on the host.",
+    "developerName": "AXETEXA PTE LTD",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://www.mdmori.com",
+    "supportURL": "https://www.mdmori.com/connect/memory#help",
+    "brandColor": "#102A35",
+    "brandColorDark": "#E8E3D5",
+    "logo": "./assets/icon.svg",
+    "composerIcon": "./assets/icon.svg",
+    "defaultPrompt": [
+      "Set up my Madam Mori connection.",
+      "What did we decide about my project?"
+    ]
+  },
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/mori-setup/SKILL.md",
+      "interface": {
+        "displayName": "Madam Mori",
+        "shortDescription": "Memory across your AI tools",
+        "longDescription": "Keep your projects, decisions and preferences connected across supported AI tools. Includes guided setup, memory recall and reconnection skills. Saves require your explicit request. Automatic skill selection depends on the host.",
+        "developerName": "AXETEXA PTE LTD",
+        "category": "Productivity",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://www.mdmori.com",
+        "supportURL": "https://www.mdmori.com/connect/memory#help",
+        "brandColor": "#102A35",
+        "brandColorDark": "#E8E3D5",
+        "logo": "./assets/icon.svg",
+        "composerIcon": "./assets/icon.svg",
+        "defaultPrompt": [
+          "Set up my Madam Mori connection.",
+          "What did we decide about my project?"
+        ]
+      },
+      "mcpServers": "./.mcp.json"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "madam-mori": {
+      "type": "http",
+      "url": "https://www.mdmori.com/mcp",
+      "oauth": {
+        "clientId": "mori-claude-code",
+        "scopes": "memory:read memory:write"
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "madam-mori",
+  "interface": {
+    "displayName": "Madam Mori"
+  },
+  "plugins": [
+    {
+      "name": "madam-mori",
+      "source": {
+        "source": "local",
+        "path": "./madam-mori-codex/madam-mori"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

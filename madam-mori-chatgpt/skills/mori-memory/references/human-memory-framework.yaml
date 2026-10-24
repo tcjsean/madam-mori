@@ -1,0 +1,176 @@
+version: 0
+
+principles:
+  - categories_are_graph_nodes
+  - no_separate_filing_layer
+  - atomic_facts_are_not_duplicated
+  - nodes_may_have_multiple_domains
+  - categories_may_evolve
+  - avoid_ambiguous_catch_all_categories
+  - support_multiple_instances_per_domain
+
+seed_domains:
+
+  Identity:
+    description: >
+      Stable facts describing the person themselves, such as name,
+      nationality, languages, biography and identifying life context.
+
+  Family:
+    description: >
+      Parents, children, siblings, spouse/partner and extended family.
+
+  Friends_and_Relationships:
+    description: >
+      Personal friendships and non-family personal relationships.
+
+  Home_and_Living:
+    description: >
+      Current and previous residences, household matters and living arrangements.
+
+  Education:
+    description: >
+      Schools, universities, courses, qualifications, current study and planned study.
+
+  Employment:
+    multiple_instances: true
+    description: >
+      Current and previous jobs, employers, roles and professional responsibilities.
+
+  Businesses:
+    multiple_instances: true
+    description: >
+      Companies, ventures and commercial activities owned, founded or operated by the user.
+
+  Investments:
+    multiple_instances: true
+    description: >
+      Financial, business, property or other investment positions and theses.
+
+  Projects:
+    multiple_instances: true
+    description: >
+      Defined ongoing or historical projects that may span employment,
+      business, personal or research activity.
+
+  Clients_and_Customers:
+    multiple_instances: true
+    description: >
+      People or organisations receiving professional or commercial services.
+
+  Professional_Contacts:
+    multiple_instances: true
+    description: >
+      Colleagues, partners, advisers and other professional relationships.
+
+  Skills_and_Qualifications:
+    multiple_instances: true
+    description: >
+      Skills, licences, ratings, certifications and professional qualifications.
+
+  Hobbies_and_Interests:
+    multiple_instances: true
+    description: >
+      Recurring personal interests and recreational activities.
+
+  Travel:
+    multiple_instances: true
+    description: >
+      Trips, travel plans, travel preferences and destinations.
+
+  Health:
+    description: >
+      User-provided health, fitness and wellbeing information.
+
+  Finances:
+    description: >
+      Personal financial matters not already represented under Investments or Businesses.
+
+  Assets_and_Property:
+    multiple_instances: true
+    description: >
+      Property and material assets owned or controlled by the user.
+
+  Vehicles_and_Machines:
+    multiple_instances: true
+    description: >
+      Cars, aircraft, machinery and other significant equipment.
+
+  Technology_and_Devices:
+    multiple_instances: true
+    description: >
+      Computers, phones, software systems, devices and technical equipment.
+
+  Preferences:
+    multiple_instances: true
+    description: >
+      Stable preferences that affect decisions or interactions.
+
+  Habits_and_Routines:
+    multiple_instances: true
+    description: >
+      Repeated behaviours, routines and recurring practices.
+
+  Goals_and_Plans:
+    multiple_instances: true
+    description: >
+      Explicit future goals, plans and intended outcomes.
+
+  Commitments_and_Obligations:
+    multiple_instances: true
+    description: >
+      Promises, responsibilities, deadlines and ongoing obligations.
+
+  Events_and_Experiences:
+    multiple_instances: true
+    description: >
+      Specific events and experiences in the user's life.
+
+  Legal_and_Regulatory:
+    multiple_instances: true
+    description: >
+      Legal, licensing, regulatory and compliance matters.
+
+  Documents_and_Records:
+    multiple_instances: true
+    description: >
+      Important documents, records and source artefacts.
+
+  Ideas_and_Inventions:
+    multiple_instances: true
+    description: >
+      User-created concepts, inventions and developed ideas.
+
+growth_rules:
+
+  prefer_existing_domain:
+    description: >
+      Use an existing domain when it naturally represents the subject.
+
+  create_subdomain_when_useful:
+    description: >
+      Create a new subdomain when multiple related facts/entities form
+      a coherent recurring cluster and the new node materially improves navigation.
+
+  avoid_premature_depth:
+    description: >
+      Do not create deep category chains for isolated facts.
+
+  allow_multiple_parents:
+    description: >
+      An entity may belong to several domains when that reflects reality.
+
+  avoid_miscellaneous:
+    description: >
+      Do not create Miscellaneous, Other, General Knowledge, History,
+      or similarly ambiguous catch-all nodes.
+
+  preserve_corrections:
+    description: >
+      Later user facts may change organisational interpretation.
+      Update the graph rather than protect a previous MORI classification.
+
+# Applies to every domain, including future domains.
+domain_defaults:
+  multiple_instances: true
+  historical_instances: true

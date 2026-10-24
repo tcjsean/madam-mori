@@ -1,0 +1,9 @@
+interface:
+  display_name: "Madam Mori Memory"
+  short_description: "Recall your saved context across AI tools"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#102A35"
+  default_prompt: "Use $mori-memory to help me with my Mori memory."
+policy:
+  allow_implicit_invocation: true

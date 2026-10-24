@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "madam-mori": {
+      "url": "https://www.mdmori.com/mcp",
+      "oauth": {
+        "client_id": "mori-codex-cli",
+        "callback_url": "http://127.0.0.1/callback"
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "status": "registration-required",
+  "endpoint": "https://www.mdmori.com/mcp",
+  "auth": {
+    "type": "oauth",
+    "client": {
+      "mode": "provided",
+      "clientId": "madam-mori-chatgpt",
+      "tokenEndpointAuthMethod": "none"
+    },
+    "authorizationUrl": "https://www.mdmori.com/oauth/authorize",
+    "tokenUrl": "https://www.mdmori.com/oauth/token",
+    "baseScopes": [
+      "memory:read",
+      "memory:write"
+    ]
+  }
+}

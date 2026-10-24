@@ -1,0 +1,14 @@
+{
+  "name": "madam-mori",
+  "description": "Madam Mori memory for your AI tools",
+  "owner": {
+    "name": "AXETEXA PTE LTD"
+  },
+  "plugins": [
+    {
+      "name": "madam-mori",
+      "source": "./madam-mori-claude/madam-mori",
+      "description": "Keep your projects, decisions and preferences connected across supported AI tools."
+    }
+  ]
+}
